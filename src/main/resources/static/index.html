@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Code Previewer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: silver;
+        }
+        #container {
+            display: flex;
+            width: 90%;
+            gap: 10px;
+        }
+        #editor, #output {
+            flex: 1;
+            overflow: auto;
+            padding: 10px;
+            height: 500px;
+            background-color: white;
+        }
+        #controls {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Code Previewer</h1>
+    <div id="controls">
+        <input type="number" id="delayInput" placeholder="Delay(ms)">
+        <button id="runButton">RUN</button>
+    </div>
+    <div id="container">
+        <textarea id="editor" placeholder="Please input the code."></textarea>
+        <div id="output">The result will display in here.</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
